@@ -1,0 +1,14 @@
+{
+  "name": "blynk-bmp280-nodejs-sample",
+  "version": "1.0.0",
+  "description": "Sample program for blink & bmp280 & nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Noah Kobayashi",
+  "license": "ISC",
+  "dependencies": {
+    "bme280-sensor": "^0.1.6"
+  }
+}
