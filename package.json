@@ -1,7 +1,7 @@
 {
-  "name": "blynk-bmp280-nodejs-sample",
+  "name": "raspberrypi-bmp280-blynk-nodejs-sample",
   "version": "1.0.0",
-  "description": "Sample program for blink & bmp280 & nodejs",
+  "description": "Sample program for Raspberry PI & BME280 & Blynk & nodejs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
