@@ -1,4 +1,12 @@
 const BME280 = require('bme280-sensor');
+const Blynk = require('blynk-library');
+const Settings = require('./settings.json')
+
+// Blynk options
+//
+const blynkAuth = Settings.blynk.auth;
+const blynkOptions = Settings.blynk.options;
+const blynk = new Blynk.Blynk(blynkAuth, blynkOptions);
 
 // The BME280 constructor options are optional.
 // 
@@ -14,6 +22,9 @@ const bme280 = new BME280(options);
 const readSensorData = () => {
   bme280.readSensorData()
     .then((data) => {
+      blynk.virtualWrite(5, data.temperature_C);
+      blynk.virtualWrite(6, Math.round(data.humidity * 100) / 100);
+      blynk.virtualWrite(7, data.pressure_hPa);
       console.log(`data = ${JSON.stringify(data, null, 2)}`);
       setTimeout(readSensorData, 2000);
     })

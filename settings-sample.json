@@ -1,0 +1,9 @@
+{
+  "blynk": {
+    "auth": "<your-auth-token>",
+    "options": {
+      "addr": "blynk-cloud.com",
+      "port": 443
+    }
+  }
+}
